@@ -5,7 +5,7 @@ import { CenteredContainer, Container, TaskEmptyContainer, TaskEmptyImage, Tasks
 import Header from '../components/Header';
 import Tasks from '../components/Tasks';
 import AddButton from '../components/AddButton';
-import ListaDados from '../ListaDados';
+import ListaDados from '../components/ListaDados';
 
 import { tasks as mock } from '../mocks/tasks';
 import DeleteConfirmModal from '../components/DeleteConfirmModal';
@@ -28,48 +28,48 @@ export default function Main() {
   const [isLoading, setIsLoading] = useState(true);
   const [isListData, setisListData] = useState(false);
 
-  useEffect(() => {
-    api.get('/tasks').then((response) => {
-      setTasks(response.data);
-      setIsLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   api.get('/tasks').then((response) => {
+  //     setTasks(response.data);
+  //     setIsLoading(false);
+  //   });
+  // }, []);
 
-  function handleDeleteTask(task) {
-    setTaskBeingDeleted(task);
-    setIsDeleteModalVisible(true);
-  }
+  // function handleDeleteTask(task) {
+  //   setTaskBeingDeleted(task);
+  //   setIsDeleteModalVisible(true);
+  // }
 
-  async function handleConfirmDeleteTask() {
-    await api.delete(`/tasks/${taskBeingDeleted.id}`);
+  // async function handleConfirmDeleteTask() {
+  //   await api.delete(`/tasks/${taskBeingDeleted.id}`);
 
-    setTasks(prevState => prevState.filter(
-      (task) => task.id !== taskBeingDeleted.id
-    ))
+  //   setTasks(prevState => prevState.filter(
+  //     (task) => task.id !== taskBeingDeleted.id
+  //   ))
 
-    setIsDeleteModalVisible(false);
-  }
+  //   setIsDeleteModalVisible(false);
+  // }
 
-  function handleEditTask(task) {
-    setIsEditTaskModalVisible(true);
-    setTaskBeingEdit(task);
-  }
+  // function handleEditTask(task) {
+  //   setIsEditTaskModalVisible(true);
+  //   setTaskBeingEdit(task);
+  // }
 
-  async function handleCreateTask(task) {
-    //Cadastro Tarefa
-    const taskAdd = (await api.post('/tasks', task)).data;
+  // async function handleCreateTask(task) {
+  //   //Cadastro Tarefa
+  //   const taskAdd = (await api.post('/tasks', task)).data;
 
-    //Fecho Modal
-    setIsNewTaskModalVisible(false);
+  //   //Fecho Modal
+  //   setIsNewTaskModalVisible(false);
 
-    //Crio uma copia do array de tarefas
-    const newTasks = tasks;
-    //Adiciono a tarefa criada no inicio do array
-    newTasks.unshift(taskAdd);
+  //   //Crio uma copia do array de tarefas
+  //   const newTasks = tasks;
+  //   //Adiciono a tarefa criada no inicio do array
+  //   newTasks.unshift(taskAdd);
 
-    //Atualizo o estado com as tarefas
-    setTasks(newTasks);
-  }
+  //   //Atualizo o estado com as tarefas
+  //   setTasks(newTasks);
+  // }
 
   
 
@@ -78,7 +78,6 @@ export default function Main() {
       <Header />
       <AddButton onPress={() => setisListData(true) } />
 
-  
       <ListaDados 
         visible={isListData}
         onClose={() => setisListData(false)}

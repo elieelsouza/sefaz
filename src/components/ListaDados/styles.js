@@ -29,3 +29,9 @@ export const CenteredContainer = styled.View`
   justify-content: center;
   flex: 1;
 `;
+
+export const Header = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;

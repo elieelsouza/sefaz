@@ -5,12 +5,13 @@ export const Overlay = styled.KeyboardAvoidingView`
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 0 10px  ;
+  width: 100%;
 `;
 
 export const ModalBody = styled.View`
   background: #FFFFFF;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 100px;
 `;
