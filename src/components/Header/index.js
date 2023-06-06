@@ -9,17 +9,15 @@ export default function Header() {
       <Image
         style={{
           resizeMode: 'contain',
-          // height:200,
+          bottom: 10,
           width: 350,
-          //justifyContent: 'absolute',
-          //alignContent: 'center',
         }}
         source={require('../../assets/images/sefaz.png')}
       />
 
-      <Text size={24}>
+      <Text color="#FFFFFF" size={24}>
         Transparencia 
-        <Text  size={24} weight="700"> SEFAZ</Text>
+        <Text color="#FFFFFF" size={24} weight="700"> SEFAZ</Text>
       </Text>
     </Container>
   );
