@@ -3,10 +3,10 @@ import { Text } from '../Text';
 
 import { Task, TaskAction, TaskDescription, TaskFooter, TaskHeader, TaskIcon, TaskStatus } from './styles';
 
-import pending from '../../assets/images/pending.png';
+//import pending from '../../assets/images/pending.png';  -- apaguei esta imagem
 import done from '../../assets/images/done.png';
-import excluir from '../../assets/images/delete.png';
-import edit from '../../assets/images/edit.png';
+//import excluir from '../../assets/images/delete.png'; -- apaguei esta imagem
+//import edit from '../../assets/images/edit.png';  -- apaguei esta imagem
 
 export default function Tasks({ tasks, onDelete, onEditTask, onChangeStatus }) {
   return (

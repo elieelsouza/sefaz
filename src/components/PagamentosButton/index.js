@@ -2,7 +2,7 @@ import { Text } from '../Text';
 import { Container, Add } from './styles';
 
 
-export default function AddButton({ onPress }) {
+export default function PagamentosButton({ onPress }) {
   return (
     <Container onPress={onPress}>
       <Add>
