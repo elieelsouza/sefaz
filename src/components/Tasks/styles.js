@@ -13,6 +13,9 @@ export const TaskHeader = styled.View``;
 
 export const TaskDescription = styled.View``;
 
+export const TaskDate = styled.View``;
+
+
 export const TaskFooter = styled.View`
   flex-direction: row;
   justify-content: space-between;

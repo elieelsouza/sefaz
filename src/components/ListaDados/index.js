@@ -6,13 +6,15 @@ import { Text } from '../Text';
 import CustomModal from '../CustomModal';
 import { Header } from './styles';
 import close from '../../assets/images/close.png';
-
-
+import { tasks } from '../../mocks/tasks';
+import Tasks from '../Tasks';
 
 export default function ListaDados({visible, onClose}) {
  
-  const [tasks, setTasks] = useState([]);
+  //const [tasks, setTasks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+
 
   return (
     <CustomModal
@@ -26,14 +28,9 @@ export default function ListaDados({visible, onClose}) {
           <Image source={close} />
         </TouchableOpacity>
       </Header>
-      <Text
-        size={20}
-        opacity={0.8}
-        color='#185BA3'
-        weight="600"
-        style={{ marginTop: 16 }}>
-        Sem Dados
-      </Text>
+      <Tasks
+        tasks={tasks}
+      />
     </CustomModal>
   );
 }

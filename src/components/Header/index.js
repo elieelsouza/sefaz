@@ -1,7 +1,6 @@
 import { Text } from '../Text';
 import { Container } from './styles';
 import { Image } from 'react-native';
-import styled from 'styled-components/native';
 
 export default function Header() {
   return (

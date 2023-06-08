@@ -11,7 +11,8 @@ export const Overlay = styled.KeyboardAvoidingView`
 
 export const ModalBody = styled.View`
   background: #FFFFFF;
-  width: 100%;
-  border-radius: 15px;
-  padding: 100px;
+  flex: 1; 
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 `;

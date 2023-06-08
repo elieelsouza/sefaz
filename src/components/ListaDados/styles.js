@@ -6,7 +6,7 @@ const isAndroid = Platform.OS === 'android';
 export const Container = styled.SafeAreaView`
   margin-top: ${isAndroid ? `${StatusBar.currentHeight}px` : 0};
   flex: 1;
-  background-color: #0772B3;
+  background-color: #90EE90;
 `;
 
 export const TasksContainer = styled.View`
@@ -31,7 +31,11 @@ export const CenteredContainer = styled.View`
 `;
 
 export const Header = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+position: absolute; 
+top: 0; width: 100%; 
+padding: 16px; 
+background-color: #f2f2f2; 
+flex-direction: row; 
+justify-content: space-between;
+ align-items: center;
 `;

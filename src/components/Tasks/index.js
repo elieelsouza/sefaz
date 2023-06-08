@@ -1,30 +1,35 @@
 import { FlatList, TouchableOpacity } from 'react-native';
 import { Text } from '../Text';
 
-import { Task, TaskAction, TaskDescription, TaskFooter, TaskHeader, TaskIcon, TaskStatus } from './styles';
+import { Task, TaskAction, TaskDescription, TaskFooter, TaskHeader, TaskIcon, TaskStatus, TaskDate } from './styles';
 
-//import pending from '../../assets/images/pending.png';  -- apaguei esta imagem
-import done from '../../assets/images/done.png';
-//import excluir from '../../assets/images/delete.png'; -- apaguei esta imagem
-//import edit from '../../assets/images/edit.png';  -- apaguei esta imagem
+//import pending from '../../assets/images/pending.png';
+//import done from '../../assets/images/done.png';
+//import excluir from '../../assets/images/delete.png';
+//import edit from '../../assets/images/edit.png';
 
-export default function Tasks({ tasks, onDelete, onEditTask, onChangeStatus }) {
+export default function Tasks({ tasks }) {
   return (
     <FlatList
       data={tasks}
-      keyExtractor={task => task.id}
+      keyExtractor={task => task.Nr_da_OB}
       renderItem={({ item: task }) => (
         <Task>
           <TaskHeader>
-            <Text size={18} weight="600">{task.title}</Text>
+            <Text size={18} weight="600">{task.Nome_Favorecido}</Text>
           </TaskHeader>
 
           <TaskDescription>
-            <Text opacity={0.5}>{task.description}</Text>
+            <Text opacity={0.5}>Valor à Pagar: R${task.Valor_Pago}</Text>
           </TaskDescription>
 
-          <TaskFooter>
-            <TaskStatus onPress={() => onChangeStatus(task)}>
+          <TaskDate>
+            <Text opacity={0.5}>Data Recebimento: {task.Data}</Text>
+          </TaskDate>
+
+
+          {/* <TaskFooter>
+            <TaskStatus>
               <TaskIcon source={task.done ? done : pending} />
               <Text color={task.done ? '#2192D8' : '#E620AE'}>
                 {task.done ? 'Feita' : 'Pendente'}
@@ -32,7 +37,7 @@ export default function Tasks({ tasks, onDelete, onEditTask, onChangeStatus }) {
             </TaskStatus>
             <TaskAction>
               <TouchableOpacity
-                onPress={() => onEditTask(task)}
+                onPress={() => alert("Abrir Modal de Edição")}
               >
                 <TaskIcon source={edit} />
               </TouchableOpacity>
@@ -42,7 +47,7 @@ export default function Tasks({ tasks, onDelete, onEditTask, onChangeStatus }) {
                 <TaskIcon source={excluir} />
               </TouchableOpacity>
             </TaskAction>
-          </TaskFooter>
+          </TaskFooter> */}
         </Task>
       )}
     />
