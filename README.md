@@ -6,11 +6,12 @@ Este projeto faz parte da disciplina de Desenvolvimento Android, pela faculdade 
 
 - Tela principal com para acessar a lista de pagamentos.
   
-- ![Texto alternativo](C:\Users\alefbs\Desktop\principal.jpg)
-  
+- ![principal](https://github.com/elieelsouza/sefaz/assets/111475913/e92dca74-4092-4204-b1b1-c7a7b3540cb5)
+
 - Lista de pagamentos que exibe cada transação resumidamente.
   
-- ![Texto alternativo](C:\Users\alefbs\Desktop\lista.jpg)
+- ![lista](https://github.com/elieelsouza/sefaz/assets/111475913/0e6b0a4b-4374-4d5f-8655-1a1f9eab9b1f)
+
   
   - Modal que exibe os detalhes dos pagamentos.
   
