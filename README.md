@@ -23,6 +23,14 @@ Certifique-se de ter as seguintes dependências instaladas:
 - Node.js
 - Expo CLI
 - Yarn (opcional, pode usar npm também)
+- Expo
+- Android Studio
+
+## Tecnologias
+
+- React Native
+- styled-components
+- expo fonts
 
 ## Instalação
 
