@@ -1,32 +1,28 @@
-import { api } from '../utils/api';
-
-import { CenteredContainer, Container, TaskEmptyContainer, TaskEmptyImage, TasksContainer } from './styles';
-
+import React, { useState } from 'react';
 import Header from '../components/Header';
-import Tasks from '../components/Tasks';
-import PagamentosButton from '../components/PagamentosButton';
 import ListaDados from '../components/ListaDados';
-
-import { tasks as mock } from '../mocks/tasks';
-import { useEffect, useState } from 'react';
-
-import { Text } from '../components/Text';
-import { ActivityIndicator } from 'react-native';
+import PagamentosButton from '../components/PagamentosButton';
+import { Container } from './styles';
 
 export default function Main() {
-  
-  const [isListData, setisListData] = useState(false);
+  const [isListDataVisible, setIsListDataVisible] = useState(false);
+
+  const handleOpenListData = () => {
+    setIsListDataVisible(true);
+  };
+
+  const handleCloseListData = () => {
+    setIsListDataVisible(false);
+  };
 
   return (
     <Container>
       <Header />
-      <PagamentosButton onPress={() => setisListData(true) } />
+      <PagamentosButton onPress={handleOpenListData} />
 
-      <ListaDados 
-        visible={isListData}
-        onClose={() => setisListData(false)}
-      />
-
-    </Container >
+      {isListDataVisible && (
+        <ListaDados visible={isListDataVisible} onClose={handleCloseListData} />
+      )}
+    </Container>
   );
 }

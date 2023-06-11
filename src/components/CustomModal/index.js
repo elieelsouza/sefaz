@@ -1,6 +1,6 @@
 import { Modal } from 'react-native';
 
-import { Overlay, ModalBody } from './styles';
+import { ModalBody, Overlay } from './styles';
 
 export default function CustomModal({ visible, onClose, children }) {
   return (
