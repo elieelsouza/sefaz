@@ -9,12 +9,6 @@ Este projeto faz parte da disciplina de Desenvolvimento Android, pela faculdade 
 
 - ## Lista de pagamentos que exibe cada transação resumidamente.
  ![lista](https://github.com/elieelsouza/sefaz/assets/111475913/0e6b0a4b-4374-4d5f-8655-1a1f9eab9b1f)
-  
-- ## Modal que exibe os detalhes dos pagamentos.
-![Texto alternativo](C:\Users\alefbs\Desktop\lista.jpg)
-
-- ## Opção de filtrar os pagamentos por data.
-![Texto alternativo](C:\Users\alefbs\Desktop\lista.jpg)
 
 ## Requisitos
 
@@ -57,6 +51,7 @@ Este projeto foi desenvolvido em grupo como parte de uma atividade acadêmica. N
 - [Allan]
 - [Anderson]
 - [Yan]
+- [Felipe]
 
 ## Licença
 
