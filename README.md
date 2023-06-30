@@ -47,11 +47,7 @@ Este projeto foi desenvolvido em grupo como parte de uma atividade acadêmica. N
 ## Autores
 
 - [Alef]
-- [Eliel]
-- [Allan]
-- [Anderson]
-- [Yan]
-- [Felipe]
+- [Eliel]  
 
 ## Licença
 
